@@ -1,0 +1,727 @@
+
+/* =================================
+   1. GENERAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #173B70;
+    border-top: 3px solid #B5122A;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #173B70;
+}
+
+.logo span {
+    color: #B5122A;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #B5122A;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    min-height: 480px;
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        110deg,
+        #f5f7fb 50%,
+        #eef2f8 50%
+    );
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.welcome-text {
+    color: #B5122A;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #173B70;
+}
+
+.hero h1 span {
+    color: #B5122A;
+}
+
+.hero-description {
+    font-size: 17px;
+    color: #444444;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   4. BUTTONS
+================================= */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 5px 10px 5px 0;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: #B5122A;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #8f0e21;
+}
+
+.secondary-btn {
+    background-color: #173B70;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #10294f;
+}
+
+
+/* =================================
+   5. FEATURES SECTION
+================================= */
+
+.features {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 30px;
+    color: #173B70;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 220px;
+    max-width: 330px;
+    padding: 30px 22px;
+
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top: 4px solid #B5122A;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.feature-card:nth-child(2) {
+    border-top-color: #173B70;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+.feature-card h3 {
+    color: #173B70;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #555555;
+}
+
+
+/* =================================
+   6. CALL TO ACTION SECTION
+================================= */
+
+.cta {
+    padding: 55px 20px;
+    text-align: center;
+    background-color: #f3f5f9;
+    border-top: 2px solid #173B70;
+}
+
+.cta h2 {
+    color: #B5122A;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 22px;
+}
+
+
+/* =================================
+   7. FOOTER
+================================= */
+
+footer {
+    background-color: #173B70;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =================================
+   8. RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .features {
+        padding: 50px 7%;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* =================================
+   9. RESOURCE LIBRARY PAGE
+================================= */
+
+.library-heading {
+    text-align: center;
+    padding: 55px 20px 35px;
+    background-color: #f3f5f9;
+    border-bottom: 2px solid #173B70;
+}
+
+.library-heading h1 {
+    color: #173B70;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.library-heading p {
+    color: #444444;
+    font-size: 16px;
+}
+
+
+/* Search and Filter Section */
+
+.library-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 45px 25px 70px;
+}
+
+.search-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.search-section input,
+.search-section select {
+    padding: 13px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+    color: #171717;
+}
+
+.search-section input {
+    flex: 2;
+    min-width: 220px;
+}
+
+.search-section select {
+    flex: 1;
+    min-width: 160px;
+}
+
+.search-section input:focus,
+.search-section select:focus {
+    outline: none;
+    border: 2px solid #173B70;
+}
+
+
+/* Resource Cards */
+
+.resource-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.resource-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-left: 5px solid #B5122A;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.resource-card:nth-child(even) {
+    border-left-color: #173B70;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.resource-tag {
+    display: inline-block;
+    background-color: #f8e8eb;
+    color: #B5122A;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.resource-card:nth-child(even) .resource-tag {
+    background-color: #e8eef7;
+    color: #173B70;
+}
+
+.resource-card h3 {
+    color: #173B70;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.resource-card p {
+    color: #555555;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.resource-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 9px 18px;
+    background-color: #173B70;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.resource-link:hover {
+    background-color: #B5122A;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    color: #B5122A;
+    font-weight: bold;
+    padding: 30px;
+}
+
+
+/* Responsive Resource Library */
+
+@media screen and (max-width: 768px) {
+
+    .resource-container {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section input,
+    .search-section select {
+        width: 100%;
+    }
+
+    .library-heading h1 {
+        font-size: 30px;
+    }
+}
+
+/* =================================
+   10. UPLOAD RESOURCE PAGE
+================================= */
+
+.upload-section {
+    padding: 50px 20px 70px;
+    background-color: #ffffff;
+}
+
+.upload-form-container {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+
+    border: 1px solid #dddddd;
+    border-top: 5px solid #173B70;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.upload-form-container h2 {
+    color: #173B70;
+    margin-bottom: 5px;
+}
+
+.form-description {
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #171717;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border: 2px solid #173B70;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group small {
+    color: #666666;
+    margin-top: 6px;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+.upload-form-container button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+
+    .upload-form-container {
+        padding: 22px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+
+/* =================================
+   11. ABOUT US PAGE
+================================= */
+
+.about-section {
+    padding: 65px 10%;
+    background-color: #ffffff;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-content h2,
+.about-features h2,
+.team-section h2 {
+    color: #173B70;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #444444;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+
+/* Mission Section */
+
+.mission-section {
+    padding: 55px 10%;
+    text-align: center;
+    background-color: #f3f5f9;
+    border-top: 3px solid #B5122A;
+    border-bottom: 3px solid #173B70;
+}
+
+.mission-section h2 {
+    color: #B5122A;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.mission-section p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+}
+
+
+/* About Features */
+
+.about-features {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.about-features h2 {
+    margin-bottom: 35px;
+}
+
+
+/* Team Section */
+
+.team-section {
+    padding: 55px 20px;
+    text-align: center;
+    background-color: #f3f5f9;
+}
+
+.team-section p {
+    color: #444444;
+    font-size: 16px;
+}
+
+.team-note {
+    margin-top: 12px;
+    font-style: italic;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+
+    .about-section,
+    .about-features {
+        padding: 45px 7%;
+    }
+
+    .about-content h2,
+    .about-features h2,
+    .team-section h2 {
+        font-size: 25px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* =================================
+   12. RECENTLY ADDED RESOURCES
+================================= */
+
+.recent-section {
+    padding: 65px 10%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.recent-section h2 {
+    color: #173B70;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.recent-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.recent-container .feature-card {
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+
+    .recent-section {
+        padding: 45px 7%;
+    }
+
+    .recent-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recent-container .feature-card {
+        width: 100%;
+    }
+}
