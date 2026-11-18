@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Resources | CampusVault</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>Campus</span>Vault
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="upload.html" class="active">Upload</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Page Heading -->
+        <section class="library-heading">
+            <h1>Share Your Resources</h1>
+
+            <p>
+                Help fellow students by contributing
+                your notes and academic materials.
+            </p>
+        </section>
+
+        <!-- Upload Form -->
+        <section class="upload-section">
+
+            <div class="upload-form-container">
+
+                <h2>Resource Details</h2>
+
+                <p class="form-description">
+                    Enter the details of the academic
+                    resource you want to share.
+                </p>
+
+                <form id="uploadForm">
+
+                    <div class="form-group">
+                        <label for="resourceTitle">
+                            Resource Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="resourceTitle"
+                            placeholder="e.g. Python Unit 1 Notes"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="e.g. Python Programming"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="semester">
+                                Semester
+                            </label>
+
+                            <select id="semester" required>
+                                <option value="">Select Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resourceType">
+                                Resource Type
+                            </label>
+
+                            <select id="resourceType" required>
+                                <option value="">Select Type</option>
+                                <option value="Notes">Notes</option>
+                                <option value="PYQ">Previous Year Paper</option>
+                                <option value="Other">Other Materials</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="academicYear">
+                            Academic Year
+                        </label>
+
+                        <input
+                            type="number"
+                            id="academicYear"
+                            placeholder="e.g. 2026"
+                            min="2000"
+                            max="2100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contributor">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contributor"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resourceLink">
+                            Resource PDF Link
+                        </label>
+
+                        <input
+                            type="url"
+                            id="resourceLink"
+                            placeholder="Paste your shareable PDF link"
+                            required
+                        >
+
+                        <small>
+                            Provide a link to a PDF you are
+                            authorized to share.
+                        </small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="permission"
+                            required
+                        >
+
+                        <label for="permission">
+                            I confirm that I have permission
+                            to share this resource.
+                        </label>
+
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Submit Resource
+                    </button>
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusVault | Bennett University</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
